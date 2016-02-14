@@ -1,0 +1,271 @@
+2016-02-15 00:28:32
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode):
+
+"RMI TCP Connection(2)-127.0.0.1" daemon prio=10 tid=0x00007fd020003000 nid=0x4037 runnable [0x00007fd0436f0000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	- locked <0x00000000ec0ceaf8> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:549)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.access$400(TCPTransport.java:619)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$1.run(TCPTransport.java:684)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$1.run(TCPTransport.java:681)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:681)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+   Locked ownable synchronizers:
+	- <0x00000000ebeca648> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"JMX server connection timeout 20" daemon prio=10 tid=0x00007fd02400f800 nid=0x4035 in Object.wait() [0x00007fd0437f2000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000ebf43418> (a [I)
+	at com.sun.jmx.remote.internal.ServerCommunicatorAdmin$Timeout.run(ServerCommunicatorAdmin.java:168)
+	- locked <0x00000000ebf43418> (a [I)
+	at java.lang.Thread.run(Thread.java:745)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI Scheduler(0)" daemon prio=10 tid=0x00007fd02400c000 nid=0x4033 waiting on condition [0x00007fd0438f3000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x00000000ebe6b118> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:807)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Connection(1)-127.0.0.1" daemon prio=10 tid=0x00007fd020001000 nid=0x4032 runnable [0x00007fd0439f3000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	- locked <0x00000000ebef1f48> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:549)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.access$400(TCPTransport.java:619)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$1.run(TCPTransport.java:684)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$1.run(TCPTransport.java:681)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:681)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+   Locked ownable synchronizers:
+	- <0x00000000ebeca0f8> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"RMI TCP Accept-0" daemon prio=10 tid=0x00007fd02c015800 nid=0x402f runnable [0x00007fd043af5000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:398)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:530)
+	at java.net.ServerSocket.accept(ServerSocket.java:498)
+	at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:52)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:399)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:371)
+	at java.lang.Thread.run(Thread.java:745)
+
+   Locked ownable synchronizers:
+	- None
+
+"Attach Listener" daemon prio=10 tid=0x00007fd058001000 nid=0x402d waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"DestroyJavaVM" prio=10 tid=0x00007fd07c00a800 nid=0x3f5d waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-4" prio=10 tid=0x00007fd07c3e4000 nid=0x3f78 waiting for monitor entry [0x00007fd043cfb000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.training.Person.sub(Person.java:34)
+	- waiting to lock <0x00000000ebcc0858> (a com.epam.training.Person)
+	at com.epam.training.Person.add(Person.java:30)
+	- locked <0x00000000ebcc0948> (a com.epam.training.Person)
+	at com.epam.training.Transaction.run(Transaction.java:26)
+	at java.lang.Thread.run(Thread.java:745)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-3" prio=10 tid=0x00007fd07c3e2000 nid=0x3f77 waiting for monitor entry [0x00007fd043dfc000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.training.Person.sub(Person.java:34)
+	- waiting to lock <0x00000000ebcc0948> (a com.epam.training.Person)
+	at com.epam.training.Person.add(Person.java:30)
+	- locked <0x00000000ebcc08f8> (a com.epam.training.Person)
+	at com.epam.training.Transaction.run(Transaction.java:26)
+	at java.lang.Thread.run(Thread.java:745)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-2" prio=10 tid=0x00007fd07c3e0800 nid=0x3f76 waiting for monitor entry [0x00007fd043efd000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.training.Person.sub(Person.java:34)
+	- waiting to lock <0x00000000ebcc08f8> (a com.epam.training.Person)
+	at com.epam.training.Person.add(Person.java:30)
+	- locked <0x00000000ebcc08a8> (a com.epam.training.Person)
+	at com.epam.training.Transaction.run(Transaction.java:26)
+	at java.lang.Thread.run(Thread.java:745)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-1" prio=10 tid=0x00007fd07c3df000 nid=0x3f75 waiting for monitor entry [0x00007fd043ffe000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.epam.training.Person.sub(Person.java:34)
+	- waiting to lock <0x00000000ebcc08a8> (a com.epam.training.Person)
+	at com.epam.training.Person.add(Person.java:30)
+	- locked <0x00000000ebcc0858> (a com.epam.training.Person)
+	at com.epam.training.Transaction.run(Transaction.java:26)
+	at java.lang.Thread.run(Thread.java:745)
+
+   Locked ownable synchronizers:
+	- None
+
+"Monitor Ctrl-Break" daemon prio=10 tid=0x00007fd07c15f800 nid=0x3f72 runnable [0x00007fd070762000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:398)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:530)
+	at java.net.ServerSocket.accept(ServerSocket.java:498)
+	at com.intellij.rt.execution.application.AppMain$1.run(AppMain.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+
+   Locked ownable synchronizers:
+	- None
+
+"Service Thread" daemon prio=10 tid=0x00007fd07c09a000 nid=0x3f70 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread1" daemon prio=10 tid=0x00007fd07c098000 nid=0x3f6f waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread0" daemon prio=10 tid=0x00007fd07c095000 nid=0x3f6e waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Signal Dispatcher" daemon prio=10 tid=0x00007fd07c092800 nid=0x3f6d runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Finalizer" daemon prio=10 tid=0x00007fd07c071000 nid=0x3f6a in Object.wait() [0x00007fd0714b4000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000ec800790> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+	- locked <0x00000000ec800790> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+   Locked ownable synchronizers:
+	- None
+
+"Reference Handler" daemon prio=10 tid=0x00007fd07c06f000 nid=0x3f69 in Object.wait() [0x00007fd0715b5000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000ec800838> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:503)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:133)
+	- locked <0x00000000ec800838> (a java.lang.ref.Reference$Lock)
+
+   Locked ownable synchronizers:
+	- None
+
+"VM Thread" prio=10 tid=0x00007fd07c06a800 nid=0x3f66 runnable
+
+"GC task thread#0 (ParallelGC)" prio=10 tid=0x00007fd07c020800 nid=0x3f5e runnable
+
+"GC task thread#1 (ParallelGC)" prio=10 tid=0x00007fd07c022800 nid=0x3f62 runnable
+
+"GC task thread#2 (ParallelGC)" prio=10 tid=0x00007fd07c024000 nid=0x3f63 runnable
+
+"GC task thread#3 (ParallelGC)" prio=10 tid=0x00007fd07c026000 nid=0x3f64 runnable
+
+"VM Periodic Task Thread" prio=10 tid=0x00007fd07c0a5000 nid=0x3f71 waiting on condition
+
+JNI global references: 220
+
+
+Found one Java-level deadlock:
+=============================
+"Thread-4":
+  waiting to lock monitor 0x00007fd0600038d8 (object 0x00000000ebcc0858, a com.epam.training.Person),
+  which is held by "Thread-1"
+"Thread-1":
+  waiting to lock monitor 0x00007fd034006528 (object 0x00000000ebcc08a8, a com.epam.training.Person),
+  which is held by "Thread-2"
+"Thread-2":
+  waiting to lock monitor 0x00007fd0600059d8 (object 0x00000000ebcc08f8, a com.epam.training.Person),
+  which is held by "Thread-3"
+"Thread-3":
+  waiting to lock monitor 0x00007fd034004e78 (object 0x00000000ebcc0948, a com.epam.training.Person),
+  which is held by "Thread-4"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-4":
+	at com.epam.training.Person.sub(Person.java:34)
+	- waiting to lock <0x00000000ebcc0858> (a com.epam.training.Person)
+	at com.epam.training.Person.add(Person.java:30)
+	- locked <0x00000000ebcc0948> (a com.epam.training.Person)
+	at com.epam.training.Transaction.run(Transaction.java:26)
+	at java.lang.Thread.run(Thread.java:745)
+"Thread-1":
+	at com.epam.training.Person.sub(Person.java:34)
+	- waiting to lock <0x00000000ebcc08a8> (a com.epam.training.Person)
+	at com.epam.training.Person.add(Person.java:30)
+	- locked <0x00000000ebcc0858> (a com.epam.training.Person)
+	at com.epam.training.Transaction.run(Transaction.java:26)
+	at java.lang.Thread.run(Thread.java:745)
+"Thread-2":
+	at com.epam.training.Person.sub(Person.java:34)
+	- waiting to lock <0x00000000ebcc08f8> (a com.epam.training.Person)
+	at com.epam.training.Person.add(Person.java:30)
+	- locked <0x00000000ebcc08a8> (a com.epam.training.Person)
+	at com.epam.training.Transaction.run(Transaction.java:26)
+	at java.lang.Thread.run(Thread.java:745)
+"Thread-3":
+	at com.epam.training.Person.sub(Person.java:34)
+	- waiting to lock <0x00000000ebcc0948> (a com.epam.training.Person)
+	at com.epam.training.Person.add(Person.java:30)
+	- locked <0x00000000ebcc08f8> (a com.epam.training.Person)
+	at com.epam.training.Transaction.run(Transaction.java:26)
+	at java.lang.Thread.run(Thread.java:745)
+
+Found 1 deadlock.
